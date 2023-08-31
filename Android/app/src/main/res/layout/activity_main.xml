@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".boundary.MainActivity"
+    android:background="@drawable/bg_red_blotch">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrain_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.mdpremotecontrol.boundary.GridView
+                android:id="@+id/grid_map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:border_color="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/obstacle_text"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Obstacles (Hold &amp; Drag):"
+                android:lines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeMaxTextSize="200sp"
+                android:autoSizeStepGranularity="1sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/grid_map"
+                android:textColor="@color/white"/>
+
+            <com.example.mdpremotecontrol.boundary.ObstacleBoxView
+                android:id="@+id/obstacle_box"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/dotted"
+                android:text="0"
+                app:layout_constraintTop_toBottomOf="@id/obstacle_text"
+                app:layout_constraintStart_toEndOf="@+id/grid_map" />
+
+            <com.example.mdpremotecontrol.boundary.ObstacleView
+                android:id="@+id/obstacle8"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="8"
+                android:lines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeMaxTextSize="200sp"
+                android:autoSizeStepGranularity="1sp"
+                app:layout_constraintTop_toBottomOf="@id/obstacle_text"
+                app:layout_constraintStart_toEndOf="@+id/grid_map" />
+
+            <com.example.mdpremotecontrol.boundary.ObstacleView
+                android:id="@+id/obstacle7"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="7"
+                android:lines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeMaxTextSize="200sp"
+                android:autoSizeStepGranularity="1sp"
+                app:layout_constraintTop_toBottomOf="@id/obstacle_text"
+                app:layout_constraintStart_toEndOf="@+id/grid_map" />
+
+            <com.example.mdpremotecontrol.boundary.ObstacleView
+                android:id="@+id/obstacle6"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="6"
+                android:lines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeMaxTextSize="200sp"
+                android:autoSizeStepGranularity="1sp"
+                app:layout_constraintTop_toBottomOf="@id/obstacle_text"
+                app:layout_constraintStart_toEndOf="@+id/grid_map" />
+
+            <com.example.mdpremotecontrol.boundary.ObstacleView
+                android:id="@+id/obstacle5"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="5"
+                android:lines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeMaxTextSize="200sp"
+                android:autoSizeStepGranularity="1sp"
+                app:layout_constraintTop_toBottomOf="@id/obstacle_text"
+                app:layout_constraintStart_toEndOf="@+id/grid_map" />
+
+            <com.example.mdpremotecontrol.boundary.ObstacleView
+                android:id="@+id/obstacle4"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="4"
+                android:lines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeMaxTextSize="200sp"
+                android:autoSizeStepGranularity="1sp"
+                app:layout_constraintTop_toBottomOf="@id/obstacle_text"
+                app:layout_constraintStart_toEndOf="@+id/grid_map" />
+
+            <com.example.mdpremotecontrol.boundary.ObstacleView
+                android:id="@+id/obstacle3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="3"
+                android:lines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeMaxTextSize="200sp"
+                android:autoSizeStepGranularity="1sp"
+                app:layout_constraintTop_toBottomOf="@id/obstacle_text"
+                app:layout_constraintStart_toEndOf="@+id/grid_map" />
+
+            <com.example.mdpremotecontrol.boundary.ObstacleView
+                android:id="@+id/obstacle2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="2"
+                android:lines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeMaxTextSize="200sp"
+                android:autoSizeStepGranularity="1sp"
+                app:layout_constraintTop_toBottomOf="@id/obstacle_text"
+                app:layout_constraintStart_toEndOf="@+id/grid_map" />
+
+            <com.example.mdpremotecontrol.boundary.ObstacleView
+                android:id="@+id/obstacle1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="1"
+                android:lines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeMaxTextSize="200sp"
+                android:autoSizeStepGranularity="1sp"
+                app:layout_constraintTop_toBottomOf="@id/obstacle_text"
+                app:layout_constraintStart_toEndOf="@+id/grid_map" />
+
+            <com.example.mdpremotecontrol.boundary.RobotView
+                android:id="@+id/robotBound"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/robot_bound_box"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/grid_map"/>
+
+            <ImageView
+                android:id="@+id/robotCar"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/car_top_view_icon"
+                android:background="@android:color/transparent"
+                app:layout_constraintTop_toTopOf="@id/robotBound"
+                app:layout_constraintStart_toEndOf="@+id/robotBound"/>
+
+            <LinearLayout
+                android:id="@+id/ll_button_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/obstacle_box"
+                app:layout_constraintStart_toStartOf="@id/obstacle_box">
+                <ImageButton
+                    android:id="@+id/image_button_reset"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/restart_svgrepo_com"
+                    android:scaleType="fitCenter"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:id="@+id/ll_do_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/image_button_undo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_undo"
+                        android:scaleType="fitCenter"
+                        android:layout_weight="1"
+                        android:tint="@color/black"/>
+
+                    <ImageButton
+                        android:id="@+id/image_button_redo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_redo"
+                        android:scaleType="fitCenter"
+                        android:layout_weight="1"
+                        android:tint="@color/black"/>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+<!--            <Button-->
+<!--                android:id="@+id/button_reset"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="0dp"-->
+<!--                android:text="Reset"-->
+<!--                android:lines="1"-->
+<!--                android:autoSizeTextType="uniform"-->
+<!--                android:autoSizeMinTextSize="1sp"-->
+<!--                android:autoSizeMaxTextSize="200sp"-->
+<!--                android:autoSizeStepGranularity="1sp"-->
+<!--                android:backgroundTint="@color/red"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/obstacle_box"-->
+<!--                app:layout_constraintStart_toStartOf="@id/obstacle_box"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/button_simulate"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="0dp"-->
+<!--                android:text="Simulate"-->
+<!--                android:lines="1"-->
+<!--                android:autoSizeTextType="uniform"-->
+<!--                android:autoSizeMinTextSize="1sp"-->
+<!--                android:autoSizeMaxTextSize="200sp"-->
+<!--                android:autoSizeStepGranularity="1sp"-->
+<!--                android:backgroundTint="@color/green_alt"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/ll_button_holder"-->
+<!--                app:layout_constraintStart_toStartOf="@id/ll_button_holder"/>-->
+
+            <Button
+                android:id="@+id/button_fastest"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="Fastest"
+                android:drawableLeft="@drawable/ic_fastest_clock"
+                android:lines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeMaxTextSize="200sp"
+                android:autoSizeStepGranularity="1sp"
+                android:backgroundTint="@color/white"
+                android:drawableTint="@color/black"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/ll_button_holder"
+                app:layout_constraintStart_toStartOf="@id/ll_button_holder"/>
+
+            <Button
+                android:id="@+id/button_explore"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="Explore"
+                android:drawableLeft="@drawable/ic_explore_compass"
+                android:lines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeMaxTextSize="200sp"
+                android:autoSizeStepGranularity="1sp"
+                android:backgroundTint="@color/white"
+                android:drawableTint="@color/black"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/button_fastest"
+                app:layout_constraintStart_toStartOf="@id/ll_button_holder"/>
+            <Button
+                android:id="@+id/button_preset"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="Presets"
+                android:drawableLeft="@drawable/ic_lib"
+                android:lines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeMaxTextSize="200sp"
+                android:autoSizeStepGranularity="1sp"
+                android:backgroundTint="@color/red"
+                android:drawableTint="@color/white"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/button_explore"
+                app:layout_constraintStart_toStartOf="@id/ll_button_holder"/>
+
+            <LinearLayout
+                android:id="@+id/ll_timer_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/button_preset"
+                app:layout_constraintStart_toStartOf="@id/ll_button_holder">
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/text_timer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="Timer: MM:SS"
+                    android:lines="1"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="1sp"
+                    android:autoSizeMaxTextSize="200sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:background="@color/black"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/button_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="START"
+                    android:drawableLeft="@drawable/ic_explore_compass"
+                    android:lines="1"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="1sp"
+                    android:autoSizeMaxTextSize="200sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:backgroundTint="@color/green_out"
+                    android:drawableTint="@color/white"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:gravity="center"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/status_history_box">
+
+            <TextView
+                android:id="@+id/reponse_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="Response"
+                android:textColor="@color/white" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout_response"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="4dp"
+                tools:visibility="visible">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/response_feed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/status_history_box">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Robot Status"
+                android:textColor="@color/white"
+                android:background="@color/black"
+                android:gravity="center"/>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout_robot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="4dp"
+                android:paddingTop="0dp"
+                tools:visibility="visible">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/robot_feed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </LinearLayout>
+    </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:id="@+id/rl_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/black">
+                    <ImageView
+                        android:id="@+id/image_feed"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@color/white"
+                        android:layout_centerInParent="true"
+                        android:visibility="invisible"/>
+                    <TextView
+                        android:id="@+id/image_status_text"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:backgroundTint="@color/white"
+                        android:background="@color/white"
+                        android:layout_centerInParent="true"
+                        android:text="Waiting for image"
+                        android:textAlignment="center"
+                        android:gravity="center"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_manuals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/rl_image">
+                    <Button
+                        android:id="@+id/m_capture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manual Capture"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:drawableLeft="@drawable/ic_camera"
+                        android:drawableTint="@color/white"
+                        android:backgroundTint="@color/red"/>
+
+                </RelativeLayout>
+
+                <ImageButton
+                    android:id="@+id/button_forward"
+                    android:layout_width="86dp"
+                    android:layout_height="86dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/up_arrow_icon"
+                    app:layout_constraintTop_toBottomOf="@id/rl_manuals"
+                    app:layout_constraintEnd_toStartOf="@id/button_turn_right"
+                    app:layout_constraintStart_toEndOf="@id/button_turn_left"
+                    android:backgroundTint="@color/white_soft"/>
+
+
+                <ImageButton
+                    android:id="@+id/button_turn_left"
+                    android:layout_width="86dp"
+                    android:layout_height="86dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/turn_left_arrow_icon"
+                    app:layout_constraintTop_toTopOf="@id/button_forward"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:backgroundTint="@color/white_soft"/>
+
+                <ImageButton
+                    android:id="@+id/button_turn_right"
+                    android:layout_width="86dp"
+                    android:layout_height="86dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/turn_right_arrow_icon"
+                    app:layout_constraintTop_toTopOf="@id/button_forward"
+                    app:layout_constraintStart_toEndOf="@id/button_forward"
+                    android:backgroundTint="@color/white_soft"/>
+
+                <ImageButton
+                    android:id="@+id/button_back_left"
+                    android:layout_width="86dp"
+                    android:layout_height="86dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/back_turn_left_arrow_icon"
+                    app:layout_constraintTop_toBottomOf="@id/button_turn_left"
+                    app:layout_constraintEnd_toEndOf="@+id/button_turn_left"
+                    android:backgroundTint="@color/white_soft"/>
+                <ImageButton
+                    android:id="@+id/button_back_right"
+                    android:layout_width="86dp"
+                    android:layout_height="86dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginBottom="368dp"
+                    android:src="@drawable/back_turn_right_arrow_icon"
+                    app:layout_constraintTop_toBottomOf="@id/button_turn_right"
+                    app:layout_constraintEnd_toEndOf="@+id/button_turn_right"
+                    android:backgroundTint="@color/white_soft"/>
+                <ImageButton
+                    android:id="@+id/button_backward"
+                    android:layout_width="86dp"
+                    android:layout_height="86dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginBottom="368dp"
+                    android:src="@drawable/down_arrow_icon"
+                    app:layout_constraintTop_toBottomOf="@id/button_forward"
+                    app:layout_constraintEnd_toStartOf="@+id/button_turn_right"
+                    app:layout_constraintStart_toEndOf="@+id/button_turn_left"
+                    android:backgroundTint="@color/white_soft"/>
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:hint="custom instruction"
+                    android:textSize="12dp"
+                    android:id="@+id/edit_text_custom_instruction"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="@id/button_turn_left"
+                    app:layout_constraintTop_toTopOf="@id/button_turn_left"
+                    android:background="@color/white"
+                    android:visibility="invisible"
+                    android:lines="2"
+                    />
+                <Button
+                    android:id="@+id/button_send_custom_instruction"
+                    android:layout_width="200dp"
+                    android:layout_height="86dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Instruct"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"
+                    app:layout_constraintTop_toBottomOf="@id/edit_text_custom_instruction"
+                    app:layout_constraintStart_toStartOf="@id/edit_text_custom_instruction"/>
+                <ImageButton
+                    android:id="@+id/m_input"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_swap"
+                    app:layout_constraintStart_toStartOf="@id/button_forward"
+                    app:layout_constraintTop_toBottomOf="@id/button_back_right"
+                    android:backgroundTint="@color/red"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/rc_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/dc_fab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/ic_connect_button"
+        android:backgroundTint="@color/green_soft"
+        app:borderWidth="0dp"
+        app:tint="@null"
+        android:visibility="invisible"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/dc_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/bt_fab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/ic_no_connect_button"
+        android:backgroundTint="@color/red"
+        app:borderWidth="0dp"
+        app:tint="@null"
+        android:visibility="invisible"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bt_fab_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@android:drawable/stat_sys_data_bluetooth"
+        android:tint="@color/white"
+        android:backgroundTint="@color/green_prime"
+        app:borderWidth="0dp"
+        android:visibility="invisible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bt_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@android:drawable/stat_sys_data_bluetooth"
+        android:tint="@color/black"
+        app:borderWidth="0dp"
+        android:visibility="invisible"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

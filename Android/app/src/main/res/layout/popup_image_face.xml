@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="500dp"
+    android:layout_height="500dp"
+    android:layout_gravity="center"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/image_face_popup_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Choose Image Face"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <ImageButton
+        android:id="@+id/up_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/short_up"
+        android:background="@drawable/short_up"
+        app:layout_constraintTop_toBottomOf="@id/image_face_popup_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:id="@+id/image_face_text"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="1"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/up_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:id="@+id/robotCar_popup"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/car_top_view_icon"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="@id/image_face_text"
+        app:layout_constraintStart_toStartOf="@id/image_face_text"
+        app:layout_constraintEnd_toEndOf="@id/image_face_text"
+        app:layout_constraintBottom_toBottomOf="@id/image_face_text"
+        android:visibility="invisible"/>
+
+
+    <ImageButton
+        android:id="@+id/left_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/short_left"
+        android:background="@drawable/short_left"
+        app:layout_constraintTop_toBottomOf="@id/up_button"
+        app:layout_constraintEnd_toStartOf="@id/image_face_text"
+        app:layout_constraintBottom_toTopOf="@id/down_button"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/right_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/short_right"
+        android:background="@drawable/short_right"
+        app:layout_constraintTop_toBottomOf="@id/up_button"
+        app:layout_constraintStart_toEndOf="@id/image_face_text"
+        app:layout_constraintBottom_toTopOf="@id/down_button"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/down_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/short_down"
+        android:background="@drawable/short_down"
+        app:layout_constraintTop_toBottomOf="@id/image_face_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="fitCenter"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
